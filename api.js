@@ -1,0 +1,16 @@
+function api(request,data){
+  api_key =    "JlJlZnJlc2hfdG9rZW49VmcyVStneDdHcVN3ODMjS29Zb2tYK1IyK1defF9zJi5pc3N1ZWQ9MDUvMDIvMjAyNCAxODowNzoxNCYuZXhwaXJlcz0wNy8wMS8yMDI5IDAwOjAwOjAwJlRva2VuPUNHcGJhV2JTWUdZeGJFMnVZRWFwckc4d0NMOVd3V0I5Um9HdlExVTVPSHI2ZmE4WURINTQ0VFMtMEh2cWJBSDZXNTdha3lWTjUtQkpZczFidUFyZDJHQUxXbENocDBrc0hpeGhGbjlsWnNzdkM3OVVhdUF5LVJfZU9tQ2RhSjhWZUhLQzlQS2tVUC1YWTIzUXdxeVFrcWo5QUFHd2dGblJvNm8yZGpab3hhM05GUGZ5TG9VbGlYUjZkZlpOUnctMDhkS195UW1pUWtkeTR1NlVHTG5ITDhaSnMtOVBWaHdoenBybFB3a0tqUGZIU2FRbGVYX3BrTFFoaFBmYU9sWnhRWjFNMDVEeEdhM0hkYU8tUFBMbm5kUVdtdjMteFFSX0NtUGkweUFVY2M2N1JscTdGOVRXaGQ3MnBVQ2phT055eFVudHp3JmNsaWVudF9pZD1JbnZlbnRvcnlDb250cm9sX2NwYXRlY2gmVXNlcklkPTQyZjY3MzVhLWIwMDMtNDU4OC04OTQwLTU2ZjM5Yjg3YTU4YSZyb2xlcz1BUEkgTG9naW4maHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZT12aGVpc2htYW5AY3BhdGVjaC5vcmcmaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvbmFtZWlkZW50aWZpZXI9NDJmNjczNWEtYjAwMy00NTg4LTg5NDAtNTZmMzliODdhNThhJmh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYWNjZXNzY29udHJvbHNlcnZpY2UvMjAxMC8wNy9jbGFpbXMvaWRlbnRpdHlwcm92aWRlcj00MmY2NzM1YS1iMDAzLTQ1ODgtODk0MC01NmYzOWI4N2E1OGE="
+
+
+  tenant_id = "cpatech"
+  var Header = new Headers();
+    Header.append("Authorization", "bearer " + api_key)
+    Header.append("Content-Type", "application/json")
+  var bodydata = JSON.stringify(data)
+  var requestoptions = {
+    method: "POST",
+    headers: Header,
+    body: bodydata
+  }
+  return fetch("https://" + tenant_id + ".waspinventorycloud.com/public-api/" + request, requestoptions)
+}

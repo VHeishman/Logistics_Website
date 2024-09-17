@@ -1,0 +1,183 @@
+:root{
+  font-size: calc(.5px + 1vw);
+  --techColor: #008E96; 
+  --mediumGreen: #006267;
+  --darkGreen: #003336;
+  --pageBack: #e9feff;
+  --stuffBack: #cbfdff;
+  --lightGreen: #90FAD1;
+  --purple: #90B9FA;
+  --gold: #e0cfa5;
+}
+
+
+
+html {
+  font-family: "Gills Sans", sans-serif; 
+  padding: none;
+  margin: none;
+  background-color: var(--techColor); 
+  height: 100vh;
+  width: 100vw;
+  /* font-size: 14px; */
+  color: var(--gold); /*var(--techColor);*/
+}
+
+body{
+  margin: 0px;
+  /* font-size: 1em;  */
+}
+
+
+
+.TableHeading{
+  width: 100%;
+  height: 10vh;
+}
+
+
+/* ------------------- Search Bar ------------------- */
+
+#searchQuery{
+  font-size: 1em;
+  background-color: var(--techColor);
+  border-radius: 3vh;
+  border: none;
+  max-height: 6vh;
+  width: 100%;
+  padding: 1vw;
+  color: var(--gold);
+}
+
+::placeholder {
+  color: var(--gold);
+}
+
+
+#title{
+  height: 8vh;
+  display: grid;
+  place-items: center;
+}
+
+
+/* ------------------- Cart Button ------------------- */
+
+#Cart{
+  width: 10vw;
+  /* border: 2px solid yellow; */
+}
+
+.cartButton {
+  /* border: 3px solid black; */
+  height: 8vh;
+  position: relative;
+  border: none;
+}
+
+
+#badge{
+  background-color: var(--techColor);
+  color: var(--gold);
+  height: 3.5vh;
+  border-radius: 1.5vh;
+  width: 2vw; 
+  position: absolute;
+  top: .25vh;
+  right: 2vw;
+  text-align: center;
+}
+/* #badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 2px;
+  background-color: var(--darkGreen);
+  color: var(--lightGreen);
+} */
+
+
+/* ------------------- Menu ------------------- */
+
+#filter1{
+  max-width: 2vw;
+}
+
+#logo{
+  max-width: 2vw;
+}
+
+img[src*="techLogo"]{
+  max-width: 10vw;
+  max-height: 10vh;
+}
+
+img[src*="Menu"]{
+  max-width: 8vw;
+  max-height: 8vh;
+}
+
+
+
+
+
+#filter{
+  font-size: 1em;
+}
+
+#fix{
+  display: flex;
+  justify-content: center;
+}
+
+
+#heading {
+  font-size: 1.5rem;
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  color: var(--mediumGreen);
+  background-color: #333333;
+}
+
+#main{
+  max-width: 75vw;
+}
+
+#mainContainer{
+  width: 75vw;
+}
+
+#mainItems{
+  max-width: 100vw;
+}
+
+
+
+
+
+body {
+  transition: 0.25s;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--stuffBack);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.25s;
+}

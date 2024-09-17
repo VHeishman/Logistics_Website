@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Logistics Inventory</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="templates.css" rel="stylesheet" type="text/css" />
+</head>
+
+<div id="sidebar" class="sidebar" value="closed">
+  <center>
+    <h1>Your cart:</h1>
+  </center>
+  <center><!--This needs to be a seperate center tag so that the button is below the items-->
+    <a href="checkOut.html"><button>Confirm order</button></a>
+  </center>
+  <br><br><br><br>
+</div>
+  
+<body>
+  <div id = "heading">
+    <table class = TableHeading>
+      <tr>
+        <td id = "filter1">
+          <img src = "Menu.png">
+        </td>
+        <td id = "logo">
+          <img src = "techLogo.png">
+        </td>
+        <td id = "title">
+          <input type="text" oninput="updateQuery()" id="searchQuery" placeholder="Search...">
+        </td>
+        <td id = "Cart">
+          <div>
+            <center>
+              <img src = "Cart.png" class = "cartButton"  onclick="toggleSidebar()">
+              <div id="badge">0</div>
+            </center>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div id = "fix">
+  <div id = "main">
+    <a href="templates.html">View Templates</a>
+    <br>
+    <table>
+      <tr>
+        <td>
+          <label>Filters:</label>
+          <select id = "filter" onchange="updateQuery()">
+            <option>All</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <div id = "mainContainer">
+      <table id = "mainItems">
+      </table>
+    </div>
+  </div>
+  </div>
+  <script src="api.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

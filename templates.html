@@ -1,0 +1,53 @@
+<head>
+  <link href="templates.css" rel="stylesheet" type="text/css" />
+</head>
+<!---->
+<td class = "StockData">
+  <center class = "StockEntry">
+    <img class="ItemPicture" src="" onerror="this.onerror=null; this.src='Default.png'" alt="No Image">
+    <p class="ItemName"></p>
+    <p class="InStockQuantity">Amount in stock:</p>
+    <input class="QuantityToOrder" type="number" value=0 oninput="limitQuantity(this)">
+    <button class="AddToCartButton" onclick="addToCart(this)">Add to cart</button>
+  </center>
+</td>
+<!---->
+
+
+
+<table class = "CartItem">
+  <tr>
+    <td><img class="CartPicture" src="" onerror="this.onerror=null; this.src='Default.png'" alt="No Image"></td>
+    <td class = "CartDescription"><h5>Description: </h5><p class = "info"></p></td>
+  </tr>
+  <tr>
+    <td><p class = "Message">Stock Message</p></td>
+    <td class = "CartAmount"><button onclick="reduce(this)">-</button><button>val</button><button onclick="unreduce(this)">+</button>
+    <button>Remove</button></td>
+  </tr>
+</table>
+
+<!---->
+
+
+<td class = "StockData">
+  <center class = "StockEntry">
+    <table class = "item">
+      <tr>
+        <td class = "finalImg">
+          <img class="ItemPicture" src="" onerror="this.onerror=null; this.src='Default.png'" alt="No Image">
+        </td>
+        <td class = "final">
+          <p class="ItemName"></p>
+          <!-- <p class = "OrderAmount"></p> -->
+          <button onclick="reduce(this)">-</button><button class = "OrderAmount">val</button><button onclick="unreduce(this)">+</button>
+          <button>Remove</button>
+        </td>
+      </tr>
+    </table>
+  </center>
+</td>
+<!---->
+
+
+<script src="testing.js"></script>

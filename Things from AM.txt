@@ -1,0 +1,67 @@
+info = {
+  "PageSize": 500,
+  "Sort": ["SiteName"],
+  "Filter": {
+    "filters": [
+      {
+        "field": "CategoryDescription",
+        "operator": "doesnotcontain",
+        "value": "Maintenance"
+      },
+      {
+        "field": "CategoryDescription",
+        "operator": "doesnotcontain",
+        "value": "Electrical"
+      },
+      {
+        "field": "CategoryDescription",
+        "operator": "doesnotcontain",
+        "value": "ECM shirts"
+      },
+      {
+        "field": "CategoryDescription",
+        "operator": "doesnotcontain",
+        "value": "Tyvek Suits"
+      },
+      {
+        "field": "SiteName",
+        "operator": "string.IsInList",
+        "value": [
+          "Warehouse"
+        ]
+      }
+    ]
+  }
+}
+
+Using this when getting inventory data filters data to be only things in the warehouse, and removes things specified by Mrs.H
+
+
+HTML
+<input type="text" oninput="updateQuery()" id="searchQuery" placeholder="Search...">
+<select id = "filter" onchange="updateQuery()">
+  <option>All</option>
+</select>
+
+JS
+function filterInventory() {
+  var e = document.getElementById("filter")
+  var chosenCategory = e.options[e.selectedIndex].textContent
+  if (chosenCategory == "All") {
+    return inventory
+  }
+  var inv = {}
+  for (item in inventory) {
+    if (inventory[item].CategoryDescription.split(" - ").includes(chosenCategory)) {
+      inv[item] = inventory[item]
+    }
+  }
+  return inv
+}
+
+updateQuery is a function that first calls filterInventory, then removes all items from the page, and repopulates it as you type
+
+
+
+Both of these things interact with data so it should hopefully be pretty simple to integrate
+I hope these are useful

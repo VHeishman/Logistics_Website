@@ -1,0 +1,103 @@
+:root{
+  font-size: calc(.5px + 1vw);
+  --itemButton: #90B9FA;
+  --darkGreen: #003336;
+
+}
+
+
+
+  
+.StockEntry {
+  /* flex-grow: 1; */
+  /* flex-basis: 25vw; */
+  font-size: 1em;
+  border-radius: 20%; 
+  /* background-color: #dffef2; */
+  max-width: 25vw;
+  margin: 10px;
+  /* border: 2px solid red; */
+}
+
+.ItemPicture { 
+  max-width: 70%; 
+  max-height: 10vh;
+  border-radius: 20%;
+}
+
+.ItemName {
+  max-height: 5vh;
+  margin: 0px;
+}
+
+.InStockQuantity{
+  /* font-size: 2em; */
+  max-height: 3vh;
+  margin: 0px;
+  /* margin-top: 20px; */
+  
+}
+
+.QuantityToOrder{
+  font-size: 1em;
+  margin-bottom: none;
+  width: 2vw;
+  height: 2vh;
+  border-radius: 1vh;
+  border: 1px solid var(--itemButton);
+}
+
+.AddToCartButton{
+  font-size: 1em;
+  background-color: var(--itemButton);
+  min-height: 2vh;
+  border-radius: 1vh;
+  border: none;
+}
+
+
+
+.CartItem{
+  /* border: 10px solid yellow; */
+  width: 75%;
+  border-top: thick double #32a1ce;
+  border-bottom: thick double #32a1ce;
+}
+
+.CartPicture{
+  border-radius: 20%;
+  width: 100%; 
+}
+
+.CartDescription{
+  width: 50%;
+}
+
+.CartAmount{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.item{
+  min-height: 20vh;
+  border: 1px solid orange;
+}
+
+.ItemName{
+  margin-bottom: 5vh;
+}
+
+.final{
+  width: 50vw;
+}
+
+.finalImg{
+  min-width: 15vw;
+}
+
+.finalInfo{
+  width: 25vw;
+}
